@@ -1,0 +1,25 @@
+.icon {
+    width: 300px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    float: left;
+    margin-right: 10px;
+  }
+  .name {
+    font-weight: bold;
+    font-size: xx-large;
+  }
+
+  p {
+    font-size: x-large;
+  }
+  h2.经历 {
+    margin-top: 130px;
+  }
+  音乐剧 {
+    width: 500px;
+  }
+  #first {
+    color: red;
+  }

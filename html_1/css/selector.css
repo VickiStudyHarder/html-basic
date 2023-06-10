@@ -1,0 +1,63 @@
+p {
+  font-size: large;
+  
+}
+#ID {
+  color: blue;
+}
+.class1 {
+  color: blueviolet;
+}
+a[target] {
+  font-size: xx-large;
+}
+a[href*="youtube"] {
+  color: gold;
+  font-size: xx-large;
+}
+#product p {
+    color:blue
+}
+#product > p {
+    color:red
+}
+
+#product + p {
+color: green;
+}
+#product ~ p {
+    color: green;
+    }
+
+article :first-child {
+    color: blue;
+}
+article :last-child {
+    color: orange;
+}
+article p:first-of-type {
+    color: crimson;
+}
+article p:last-of-type {
+    color: purple;
+}
+ul li:nth-child(odd) {
+    color: deeppink;
+
+}
+a:visited,
+a:link {
+    color:aquamarine
+}
+a:hover, a:focus {
+    color:pink;
+}
+p::first-letter {
+    font-size: x-large;
+}
+p::first-line {
+    font-weight: bold;
+}
+::selection {
+    background-color: pink;
+}

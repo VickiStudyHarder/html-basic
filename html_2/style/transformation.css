@@ -1,0 +1,120 @@
+.transformation_2d,
+.transformation_3d,
+.transition,
+.animation
+{
+    display: flex;
+    border: 5px solid rgb(150, 150, 232);
+    /* justify-content: center;
+  align-items: center; */
+    /* flex-direction: column; */
+    /* height: 100vh; */
+}
+
+.box {
+    width: 100px;
+    height: auto;
+    background-color: aquamarine;
+    margin: 2rem;
+}
+
+.box1:hover {
+    transform: rotate(15deg);
+}
+
+.box2:hover {
+    transform: scale(1.5);
+}
+
+.box3:hover {
+    transform: skew(-15deg);
+}
+
+.box4:hover {
+    transform: translate(10px, 10px);
+}
+
+.box5:hover {
+    transform: rotate(45deg) translateX(50px);
+}
+
+.box6:hover {
+    transform: translateX(50px) rotate(45deg);
+}
+
+/* 3d transformation */
+.box7:hover {
+    transform: perspective(200px) translateZ(50px);
+}
+
+/* perspective is an arbitrary value, it just mean the original distance between us and the object is 200px */
+
+.box8:hover {
+    transform: perspective(200px) rotateY(45deg);
+    transform-origin: 0 50%;
+}
+
+/* 0 0 means top left corner of the box */
+/* 0 50% mean the y axis ar the middle */
+
+.container {
+    perspective: 200px;
+}
+
+.container:hover .box {
+    transform: rotateY(45deg);
+    transform-origin: 0 50%;
+}
+
+.container:hover .box10 {
+    transform: rotateX(45deg);
+}
+
+/* the transformation is applied to each individual element inside the container  */
+/* to make sure they sure the same perspective, the perspective property need to applied to the parent element  */
+/* we can apply different rule to each element within the container */
+
+/* transition */
+
+/* custom transition */
+.box-transition1 {
+    transition: transform 0.5s cubic-bezier(0.17, 0.67, 0.88, 0.19) 1s;
+}
+
+/* change color */
+.box-transition2 {
+    transition: transform 1s, background 0.5s;
+
+}
+
+.box-transition2:hover {
+    transform: rotate(45deg);
+    background: dodgerblue;
+}
+
+/* animation */
+@keyframes pop {
+    0% {
+        transform: scale(1);
+    }
+    25% {
+        transform: scale(1.25);
+    }
+    50% {
+        transform: rotate(45deg);
+        background: tomato;
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+
+.box-animation {
+    animation-name: pop;
+    animation-duration: 4s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    animation-direction: alternate-reverse;
+    /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}

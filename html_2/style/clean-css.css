@@ -1,0 +1,22 @@
+/* create property variable for the root html  */
+:root {
+    --color-primary:#ffdd36;
+    --border-radius:10px;
+    --border-size:2px;
+}
+
+
+
+.one {
+    background: var(--color-primary);
+    border-radius: var(--border-radius);
+    height: 80px;
+    width: 80px;
+}
+.two {
+    background: var(--color-primary);
+    border-radius: var(--border-radius);
+    height: 80px;
+    width: 80px;
+}
+

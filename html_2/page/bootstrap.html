@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+</head>
+<body>
+    <header>
+        <ul class="navbar">
+            <li>
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/page/layout.html">Layout</a>
+            </li>
+            <li>
+              <a href="/page/typography.html"> Typography</a>
+            </li>
+            <li>
+              <a href="/page/images.html">Images</a>
+            </li>
+            <li>
+              <a href="/page/forms.html">Forms</a>
+            </li>
+            <li>
+              <a href="#">Transformation</a>
+            </li>
+            <li>
+              <a href="#">Clean CSS</a>
+            </li>
+          </ul>
+    </header>
+    <main>
+        <!-- when using bootstrap need to use same class name -->
+        <!-- giving different class name to use css -->
+        <form class="w-50">
+            <div class="mb-3">
+              <label class="form-label" for="name">Name</label>
+              <input class="form-control" id="name" type="text" />
+            </div>
+            <div class="mb-3">
+              <label class="form-label" for="email">Email</label>
+              <input class="form-control" id="email" type="email" />
+              <!-- email type will verify it is valid email -->
+            </div>
+            <!-- two class name: btn for basic format, btn-primary for color etc -->
+            <button class="btn btn-primary" type="submit">Register</button>
+            <button class="btn btn-secondary" type="reset">Clear</button>
+          </form>
+    </main>
+    
+</body>
+</html>

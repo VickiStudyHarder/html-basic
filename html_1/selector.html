@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/selector.css" />
+  </head>
+  <body>
+    <header>
+      <a href="index.html">home</a>
+    </header>
+    <main>
+      <h1>Selector</h1>
+      <section>
+        <h2>Basic selector</h2>
+        <p>Type</p>
+        <p id="ID">ID select with ID start with #</p>
+        <p class="class1">Class</p>
+        <p class="class1">Class more</p>
+        <p>Attribute</p>
+        <p>select a with target attribute</p>
+        <a href="https://google.com" target="_blank">Google</a>
+        <p>select with attribute href but using 模糊搜索</p>
+        <a href="https://www.youtube.com/">Youtube</a>
+        <p>*= contain certain words</p>
+        <p>^= start with</p>
+        <p>$= end with</p>
+        <p>select with two attribute a[][]</p>
+      </section>
+      <section id="product">
+        <h2>Relational selector</h2>
+        <p>
+          direct child of the product section, use #product > p to select direct child
+          <article>
+            <p>
+                Lorem ipsum dolor sit amet.
+            </p>
+          </article>
+        </p>
+      </section>
+      <p>this is a direct sibling of the product section as it come after the product section, use #product + p</p>
+      <p>product ~ p select all sibling after</p>
+      
+      <section>
+        <h2 >Pseudo-class selector</h2>
+        <article>
+            <h2>Lorem, ipsum.</h2>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <p>Lorem ipsum dolor sit amet.</p>
+            <h2>Lorem, ipsum dolor.</h2>
+        </article>
+        
+      </section>
+      <section>
+        <h2>ul>li*5{Item $}</h2>
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li> 
+            <li>Item 4</li>
+            <li>Item 5</li>
+        </ul>
+
+      </section>
+      <section>
+        <h2>Pseudo-class for hyperlink</h2>
+        <a href="https://zh.wikipedia.org/wiki/%E9%83%91%E4%BA%91%E9%BE%99"> link</a>
+      <p>focus  when user select using tab 
+      </p>
+    </section>
+    <section>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit voluptate ipsum quod molestiae optio, iste minima magni quaerat similique, laborum id libero quibusdam? Laboriosam nulla quod assumenda, consequatur quia minus illo aliquam, nam quibusdam temporibus dolor ipsum sunt. Natus eaque magni excepturi fugiat praesentium eum deserunt repellendus, ut cumque debitis?</p>
+    </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Port+Lligat+Slab:400");
+
+html {
+  font-size: 100%;
+} /*16px*/
+
+body {
+  background: url(../images/images/bg-paper@2x.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 300vh;
+  font-family: "Port Lligat Slab", serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Port Lligat Slab", serif;
+  font-weight: 400;
+  line-height: 1.3;
+  text-transform: capitalize;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2.488rem;
+}
+
+h2 {
+  font-size: 2.074rem;
+}
+
+h3 {
+  font-size: 1.728rem;
+}
+
+h4 {
+  font-size: 1.44rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+small,
+.text_small {
+  font-size: 0.833rem;
+}
+
+.block {
+    display: block;
+}
+
+/* css sprite */
+/* 引入的其实是同一个图片，通过不同的class name设置取出这个图片不同的位置 */
+.bg-rocketship {
+  background: url("../images/CSS-Sprite-Package/css-sprite-combined.png") 0px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  /* span is an inline element, need to set as inline block to provide height*/
+}
+
+.bg-saturn {
+  background: url("../images/CSS-Sprite-Package/css-sprite-combined.png") -100px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-ufo {
+  background: url("../images/CSS-Sprite-Package/css-sprite-combined.png") -200px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-dishes {
+  background: url("../images/CSS-Sprite-Package/css-sprite-combined.png") -300px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+.bg-landing {
+  background: url("../images/CSS-Sprite-Package/css-sprite-combined.png") -400px -0px;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+
+/* clipping */
+.meal {
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%);
+    
+}
+
+/* filter  */
+.filter:hover {
+    filter: grayscale(70%) blur(3px);
+}
+
+/* nav bar */
+
+.navbar {
+  list-style-type: none; /* 移除列表样式 */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #87ccf7; /* 导航栏背景色 */
+}
+
+.navbar li {
+  float: left;
+  font-size: larger;
+  font-weight: bolder
+}
+
+.navbar li a {
+  display: block;
+  color: white; /* 导航链接颜色 */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.navbar li a:hover {
+  background-color: rgba(250, 202, 247,80%); /* 鼠标悬停时链接的背景色 */
+}

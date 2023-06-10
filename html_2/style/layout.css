@@ -1,0 +1,287 @@
+/* *, *::after, *::before {
+    box-sizing: border-box;
+}全局，会让所有都用这个border box，但是对pusedo */
+
+body {
+  height: 200vh;
+}
+h2 {
+  font-size: xx-large;
+  text-decoration: underline;
+}
+.p2 {
+  /* padding: 10px 20px 10px 20px; trbl */
+  border: 5px solid gold;
+  padding: 0;
+  margin: 20px;
+}
+.p1 {
+  padding: 10px 20px 10px 20px;
+  border: 5px solid gold;
+  /* padding: 0; */
+  /* margin: 20px; */
+}
+
+.box1 {
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  padding: 2px;
+  border: 1px solid red;
+  /* margin: 10px; */
+  display: inline-block; /*可以让两个span在一行上*/
+  /* inline element like span 
+    doesn't have width and height, need to change to inline-block */
+}
+
+.box2 {
+  width: 30px;
+  height: 30px;
+  background-color: gold;
+  padding: 2px;
+  border: 1px solid red;
+  margin: 1px;
+}
+
+.box3 {
+  width: 200px;
+  height: 200px;
+  border: 3px solid gold;
+  overflow: hidden auto; /* auto:only show scroll bar when overflow, hide the overflow for horizontal axis*/
+}
+
+.box4 {
+  width: 50%; /*   占parent elemen（body）的一般*/
+  height: 20vh;
+  background-color: gold;
+}
+
+/* positioning */
+.boxes {
+  width: 5rem;
+  height: 5rem;
+}
+
+.box5 {
+  border: 3px solid lightgray;
+}
+
+.box-one {
+  background: red;
+  position: relative; /*relative to it's original position */
+  /* left:5rem; */
+  z-index: -2;
+}
+.box-two {
+  background-color: blue;
+  position: relative; /*relative to it's original position */
+  left: 4rem;
+  top: -2rem;
+  z-index: -2;
+}
+.box-three {
+  background-color: green;
+  position: relative; /*relative to it's original position */
+  left: 5rem;
+  bottom: 4rem;
+  z-index: -3;
+  /* bottom:2rem; */
+}
+
+.box6 {
+  border: 3px solid lightgray;
+  position: relative;
+}
+
+.box-four {
+  background: red;
+  position: relative;
+  /* position: absolute; */
+}
+.box-five {
+  background-color: blue;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.box-six {
+  background-color: green;
+  /* position: absolute; */
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  background-color: lightgray;
+  /* font-size: auto; */
+  /* left: 2rem;
+  right: 2rem; */
+  width: 100%;
+}
+/* to let the browser decide the length of the navbar, set the distance between navbar and the browser boarder */
+
+.navBar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+  font-size: large;
+}
+
+nav ul li {
+  text-align: center;
+}
+
+nav ul li a:hover {
+  background-color: #4c4b4b;
+  color: #fff;
+}
+
+/* floating element */
+.avatar {
+  width: 5rem;
+  height: 5rem;
+  background-color: gold;
+  float: left;
+  /* move the gold block to the left of the container */
+  margin-right: 0.5rem;
+}
+
+.clear {
+  clear: both;
+}
+
+.tweet {
+  border: 5px solid lightblue;
+  /* overflow: hidden; */
+}
+
+.clearfix::after {
+  content: "";
+  display: block; /* default is inline element */
+  clear: both;
+}
+
+.container {
+  border: 3px solid lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* row center */
+  height: 50vh;
+  align-items: center; /* column end */
+  flex-wrap: wrap; /* any item can't fit in a single line wrap to second line */
+  align-content: center; /* when we use flex wrap, the content doesn't fit to center. we can use align content to algin the whole content */
+}
+
+.flexbox {
+  width: 10rem;
+  height: 10rem;
+  background: gold;
+  margin: 1rem;
+}
+
+.container2 {
+  border: 3px solid lightblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; /* row center */
+  height: 30vh;
+  align-items: center; /* column end */
+}
+
+.flexbox2 {
+  flex-basis: 20rem;
+  /* flex-grow: 1; */
+  flex-shrink: 1;
+  width: 10rem;
+  height: 10rem;
+  background: gold;
+  margin: 1rem;
+}
+
+.flexbox-one {
+  flex-shrink: 0; /* prevent it to shrink */
+  /* align-self: flex-start; */
+}
+
+/* grid */
+.gridContainer {
+  display: grid;
+  /* 3 x 2 */
+  /* grid-template-rows:repeat(3, 100px);
+    grid-template-columns: repeat(2, 100px); */
+  grid-template: 100px auto 100px/30fr 70fr;
+  grid-template-areas:
+    "header  header"
+    "sidebar main"
+    ".  footer";
+  border: 3px solid lightblue;
+  /* justify-items: center;
+    align-items: center;
+    justify-content: center;
+    align-content: center; */
+  height: 50vh;
+  /* row-gap: 10px;
+    column-gap: 10px; */
+  gap: 10px;
+}
+
+.gridBox {
+  background: gold;
+  /* width: 5rem;
+    height: 5rem; */
+}
+
+.gridbox-one {
+  /* grid-column: 1/3; */
+  /* grid-column: 1/ span 2;
+    grid-row: 2;
+    grid-area: 1 / 1 / 1 / 3; */
+  /* box start from line 1 stop at line 3 */
+  grid-area: header;
+}
+
+.gridbox-four {
+  grid-area: footer;
+}
+
+/* hiding element */
+
+.first {
+  /* display: none; */
+  visibility: hidden;
+}
+
+/* media queries */
+
+.mediaContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.mediaBox {
+  background: gold;
+  padding: 1rem;
+}
+
+.mediaBox:nth-of-type(2) {
+  background: blue;
+}
+
+/* for screen that is smaller then 600px */
+@media screen and (min-width: 600px) {
+  .mediaContainer {
+    flex-direction: row;
+  }
+}
+@media print {
+  body {
+    font-size: 12pt;
+  }
+
+  .mediaBox {
+    padding: 0.5cm;
+  }
+}

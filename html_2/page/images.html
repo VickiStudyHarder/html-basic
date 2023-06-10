@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>images</title>
+    <link rel="stylesheet" href="/style/images.css" />
+  </head>
+  <body>
+    <header>
+      <ul class="navbar">
+        <li>
+            <a href="/index.html">Home</a>
+        </li>
+        <li>
+            <a href="/page/layout.html">Layout</a>
+        </li>
+        <li>
+            <a href="/page/typography.html"> Typography</a>
+        </li>
+        <li>
+            <a href="/page/images.html">Images</a>
+        </li>
+        <li>
+            <a href="/page/forms.html">Forms</a>
+        </li>
+        <li>
+            <a href="/page/transformation.html">Transformation</a>
+        </li>
+        <li>
+            <a href="/page/clean-CSS.html">clean CSS</a>
+        </li>
+    </ul>
+    </header>
+    <main>
+      <h1>images</h1>
+
+      <!-- content images -->
+      <h2>content images</h2>
+      <img src="/images/images/meal.jpg" alt="A bowl of salmon and curry" />
+      <p>
+        for decorated image, set alt as empty string, so it doesn't show jpg
+        name
+      </p>
+
+      <!-- background images -->
+      <h2>background images</h2>
+      <p>background-repeat: no-repeat</p>
+      <p>
+        background-position: 100% 120px === push image to the right of
+        container, to bottom 120px
+      </p>
+      <p>
+        background-size: 100% 100% == default height of body element is 0, need
+        to set height to 100vh
+      </p>
+      <p>background-attachment: fixed == make the bg image fixed</p>
+
+      <!-- css sprite -->
+      <h2>css sprite</h2>
+      <p>
+        when a website have multiple image, each image need to send a single get
+        http request, we can use CSS sprite to put all the image into one image
+        to create only one http request
+      </p>
+      <a class="block" href="https://cssspritestool.com/">cssspritestool.com</a>
+      <span class="bg-dishes"></span>
+      <span class="bg-landing"></span>
+      <span class="bg-rocketship"></span>
+      <span class="bg-saturn"></span>
+      <span class="bg-ufo"></span>
+      <p>problem: using one css sprite, image too big. not flexible.</p>
+      <p>good way for logo, icon, thing that rarely changes</p>
+
+      <!-- data urls -->
+      <h2>data urls</h2>
+      <p>another optimization technique to reduce http requests</p>
+      <p>use the image tag, no need to have a http request</p>
+      <a href="https://www.cssportal.com/image-to-data/" class="block">
+        data url generator</a
+      >
+      <img
+        alt="landing.png"
+        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGQAAABkCAYAAABw4pVUAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAFGmlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNi4wLWMwMDIgNzkuMTY0MzUyLCAyMDIwLzAxLzMwLTE1OjUwOjM4ICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOmRjPSJodHRwOi8vcHVybC5vcmcvZGMvZWxlbWVudHMvMS4xLyIgeG1sbnM6cGhvdG9zaG9wPSJodHRwOi8vbnMuYWRvYmUuY29tL3Bob3Rvc2hvcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RFdnQ9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZUV2ZW50IyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgMjEuMSAoTWFjaW50b3NoKSIgeG1wOkNyZWF0ZURhdGU9IjIwMjAtMTAtMDdUMDY6NDA6MjQtMDc6MDAiIHhtcDpNb2RpZnlEYXRlPSIyMDIwLTEyLTA2VDEwOjE2OjE3LTA4OjAwIiB4bXA6TWV0YWRhdGFEYXRlPSIyMDIwLTEyLTA2VDEwOjE2OjE3LTA4OjAwIiBkYzpmb3JtYXQ9ImltYWdlL3BuZyIgcGhvdG9zaG9wOkNvbG9yTW9kZT0iMyIgcGhvdG9zaG9wOklDQ1Byb2ZpbGU9InNSR0IgSUVDNjE5NjYtMi4xIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBhNjBjNTQ1LTkyM2Mt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"
+      />
+      <ul>
+        problem
+        <li>increase the size of html or stylesheet</li>
+        <li>increase complexity</li>
+        <li>slow on mobile</li>
+      </ul>
+
+      <!-- clipping -->
+      <h2>clipping</h2>
+      <p>change the shape of image</p>
+      <img src="/images/images/meal.jpg" alt="" class="meal" />
+
+      <!-- filter -->
+      <h2>filter</h2>
+      <ul>
+        <li>grayscale</li>
+        <li>blur</li>
+        <li>contrast</li>
+        <li>brightness</li>
+        <li>saturate</li>
+      </ul>
+      <img src="/images/images/meal.jpg" alt="" class="filter" />
+
+      <!-- supprting high density screen -->
+      <p>physical resolution: actual resolution</p>
+      <p>logical resolution: how they behave</p>
+      <p>device pixel ratio(DPR): physical/logical</p>
+      <p>
+        for example: iphone 4 have physical resolution of 960 x 640 but logical
+        resolution of 480 x 320. This mean it use 2 pixel to display 1 pixel
+        image.
+      </p>
+      <img
+        src="/images/images/meal.jpg"
+        alt="A bowl of salmon and curry"
+        class="meal1"
+        srcset="
+          /images/images/meal.jpg    1x,
+          /images/images/meal@2x.jpg 2x,
+          /images/images/meal@3x.jpg 3x
+        "
+      />
+      <img
+        alt="A bowl of salmon and curry"
+        class="meal1"
+        srcset="
+          /images/images/meal.jpg    1x,
+          /images/images/meal@2x.jpg 2x,
+          /images/images/meal@3x.jpg 3x
+        "
+      />
+      <!-- if we don't specify the source, it will use the one that suitable for the DPR -->
+
+      <!-- resolution switching -->
+      <h2>resolution switching</h2>
+      <img
+        src="/images/images/meal.jpg"
+        alt="A bowl of salmon and curry"
+        class="meal1"
+        srcset="
+          /images/images/meal.jpg     400w,
+          /images/images/meal@2x.jpg  800w,
+          /images/images/meal@3x.jpg 1200w
+        "
+        sizes="
+      (max-width: 500px) 100vw,
+      (max-width: 700px) 50vw,
+      33vw
+      "
+      />
+      <!-- give the actual width of the image let the browser decide whiich to use -->
+
+      <!-- art direction -->
+      <h2>art direction</h2>
+      <picture>
+        <source media="(min-width: 501px)" srcset="/images/images/meal.jpg" />
+        <source
+          media="(max-width: 500px)"
+          srcset="/images/images/meal-cropped.jpg"
+        />
+        <img src="/images/images/meal.jpg" alt="" />
+      </picture>
+
+      <!-- scalable vector graphics -->
+      <h2>SVG</h2>
+    </main>
+    <footer></footer>
+  </body>
+</html>

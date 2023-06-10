@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout</title>
+    <link rel="stylesheet" href="/style/layout.css" />
+
+  </head>
+  <body>
+    <header>
+      <!-- navigation bar -->
+      <nav class="navBar">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/exercises/layout_exercise.html">exercises</a></li>
+          <li><a href="#boxModel">Box Model</a></li>
+          <li><a href="#sizingElement">Sizing Element</a></li>
+          <li><a href="#Overflowing">Overflowing</a></li>
+          <li><a href="#measurementUnit">Measurement Unit</a></li>
+          <li><a href="#positioning">Positioning</a></li>
+          <li><a href="#floatingElement">Floating Element</a></li>
+          <li><a href="#flexbox">Flexbox</a></li>
+          <li><a href="#grid">Grid</a></li>
+          <li><a href="#hidingElement">Hiding Element</a></li>
+          <li><a href="#medieaQueries">Mediea Queries</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1>Layout</h1>
+
+      <!-- box model -->
+      <h2 id="boxModel">Box Model</h2>
+      <img src="/images/boxModel.png" alt="" />
+      <img src="/images/boxModel2.png" alt="" />
+      <p class="p2">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+      <p class="p2">margin is assigned by chrome by default - 16</p>
+      <p class="p1">use margin to set space between Element</p>
+      <p class="p1">use padding to set space between content and border</p>
+      
+      <!-- Sizing Element -->
+      <h2 id="sizingElement">Sizing Element</h2>
+      <span class="box1"></span><span class="box1"></span>
+      <div class="box2"></div>
+      <div class="box2"></div>
+      <p>
+        width and height define the size of the content area,any change to
+        padding and border will affect the size of the size of the visible area
+      </p>
+      <p>
+        we can use box-sizing: border-box to control the width and height apply
+        to the border
+      </p>
+
+      <!-- Overflowing -->
+      <h2 id="Overflowing">Overflowing</h2>
+      <div class="box3">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+          harum eveniet officia necessitatibus tenetur et facilis delectus a,
+          nesciunt libero qui odit accusamus nam, repudiandae ipsa. Velit
+          laudantium dicta soluta cumque voluptatem voluptas in error ad
+          incidunt omnis fuga harum eveniet tempora sint dolores, nobis
+          reprehenderit natus, maiores laboriosam adipisci.
+        </p>
+      </div>
+      <!-- Measurement Unit -->
+      <h2 id="measurementUnit">Measurement Unit</h2>
+      <img src="/images/absolute.png" alt="">
+      <img src="/images/relative.png" alt="">
+      <div class="box4">
+      </div>
+      <p>default font size is 16px
+        10em is 10*default
+        10rem is 19* root element font size (16px)
+        em and rem is good when you want the size to change accordingly with the font size
+      </p>
+      <!-- Positioning -->
+      <h2 id="positioning">Positioning</h2>
+      <div class="box5">
+        <p>z-index: 数字越高就在越表层，数字大小不影响</p>
+        <div class="boxes box-one"></div>
+        <div class="boxes box-two"></div>
+        <div class="boxes box-three"></div>
+    
+      </div>
+      <div class="box6">
+        <p> 当container的position是relative，child box可以是absolute来定位child's position relative to parent container</p>
+        <div class="boxes box-four"></div>
+        <div class="boxes box-five"></div>
+        <di  v class="boxes box-six"></div>
+      </div>
+        <p>relative: change element position relative to it's normal position</p>
+        <p>absolute: change element position relative to it's parent position</p>
+        <p>fixed: relative to the viewport</p>
+      </div>  
+
+      <!-- Floating Element  -->
+      <h2 id="floatingElement">Floating Element</h2>
+      <p>another technique for positioning and creating layout</p>
+      <article class="tweet clearfix">
+        <div class="avatar"></div>
+        <p>any independent, self contained piece of content</p>
+      
+        <!-- <div class="clear"></div> -->
+      </article>
+      <p>use clear: both on any element below to move it under the block</p>
+      <p>by the default, parent element don't see Floating element </p>
+      <p>1. add a div with clear to remove the effect, but the div is not descriptive</p>
+      <p>2. use pseudo code to apply clear, we can use a more general class name to apply the clearfix</p>
+      <p>3. set overflow to anything other then visible, i.e. hidden. rarely used for flex and grid</p>
+      
+      <!-- Flexbox -->
+      <h2 id="flexbox">FlexBox: for item in a row or column</h2>
+      <div class="container">
+        <div class="flexbox">A</div>
+        <div class="flexbox">B</div>
+        <div class="flexbox">C</div>
+        <div class="flexbox">D</div>
+        <div class="flexbox">E</div>
+        <div class="flexbox">F</div>
+        <div class="flexbox">G</div>
+        <div class="flexbox">H</div>
+      </div>
+      <p> Aligning Item: apply to flex container</p>
+      <p> 1. justify-content: along the main axis</p>
+      <p> 2. align-item: along the cross axis</p>
+      <p> 3. algin-content: when flx-wrap is used to make item not stretch and wrap to second line</p>
+      
+
+      <div class="container2">
+        <div class="flexbox2 flexbox-one">A</div>
+        <div class="flexbox2">B</div>
+        <div class="flexbox2">C</div>
+      </div>
+
+      <ul> Aligning Item: apply to flex item
+        <li>align-self: can apply to flex item to overwrite the effect of flex container</li>
+        <li>flex-basis: the initial size of a flex item</li>
+        <li>flex-grow: the growth factor, setting growth factor to 2 doesn't mean double the size to other element </li>
+        <li>flex-shrink: the shrink factor</li>
+        <li>flex: grow shrink basis: short hand to combine the three above properties</li>
+      </ul>
+      
+      <!-- Grid -->
+      <h2 id="grid">Grid</h2>
+        <div class="gridContainer">
+          <div class="gridBox gridbox-one">A</div>
+          <div class="gridBox">B</div>
+          <div class="gridBox">C</div>
+          <div class="gridBox gridbox-four">D</div>
+        </div>
+        <ul>grid property
+          <li>grid-template-row: set the number of row</li>
+          <li>grid-template-column: set the number of column</li>
+          <li>grid-template: set the number of row/column</li>
+          <li>justify-items: along the horizontal axis, move the item in within the grid</li>
+          <li>align-item: along the vertical axis, move the item in within the grid</li>
+          <li>justify-content: move the whole grid in the container horizontally</li>
+          <li>algin-content: move the whole grid in the container vertically</li>
+      
+        </ul>
+        <ul> gap
+          <li>row-gap</li>
+          <li>column-gap</li>
+          <li>gap: 10px, apply to both row and column</li>
+        </ul>
+        <ul> placing item: set on item
+          <li>grid-row: set the starting row of grid item</li>
+          <li>grid-column: set the starting column of grid item </li>
+          <li>grid-area: start row number / start column number / end row number / end column number </li>
+        </ul>
+        <ul> Placing Item in Named Area
+          <li>grid-template-areas: give a name to every space in the grid, . for empty</li>
+          <li>grid-area: format the item to take up a specific space </li>
+          <li></li>
+        </ul>
+
+      <!-- Hiding Element -->
+      <h2 id="hidingElement">hiding Element</h2>
+      <p class="first">First</p>
+      <p>Second</p>
+      <P>display:none = as the element doesn't exist</P>
+      <p>visibility: hidden = hide the element but still allocate space </p>
+
+      <!-- Media Queries -->
+      <h2 id="medieaQueries">Media Queries</h2>
+      <p>responsive design: provide different styles for different devices depending on their features, such as screen size, orientation</p>
+      <p>normally start from mobile, then adjust the size to desktop, easier to add feature then to reduce feature</p>
+      <div class="mediaContainer">
+        <div class="mediaBox">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, exercitationem.</p>
+        </div>
+        <div class="mediaBox">
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident consequatur est dolorem totam voluptatem ipsam!</p>
+        </div>
+        <p>need to find a break point</p>
+        <p>print need to use actual size to set print out version </p>
+      </div>
+
+    </main>
+    <footer>
+      <div> ,</div>
+    </footer>
+  </body>
+</html>

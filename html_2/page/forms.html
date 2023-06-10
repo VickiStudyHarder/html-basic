@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forms</title>
+    <link rel="stylesheet" href="/style/forms.css" />
+    <link rel="stylesheet" href="/style/nav-bar.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+    />
+    <!-- <link rel="stylesheet" href="/style/normalize.css" /> -->
+  </head>
+  <body>
+    <header>
+        <ul class="navbar">
+            <li>
+                <a href="/index.html">Home</a>
+            </li>
+            <li>
+                <a href="/page/layout.html">Layout</a>
+            </li>
+            <li>
+                <a href="/page/typography.html"> Typography</a>
+            </li>
+            <li>
+                <a href="/page/images.html">Images</a>
+            </li>
+            <li>
+                <a href="/page/forms.html">Forms</a>
+            </li>
+            <li>
+                <a href="/page/transformation.html">Transformation</a>
+            </li>
+            <li>
+                <a href="/page/clean-CSS.html">clean CSS</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+      <h2>basic forms</h2>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" type="text" />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" />
+          <!-- email type will verify it is valid email -->
+        </div>
+        <button type="submit">Register</button>
+        <button type="reset">Clear</button>
+      </form>
+
+      <!-- CSS framework -->
+      <h2>CSS-framework</h2>
+      <ul class="CSS-framework">
+        CSS Framework
+        <li><a href="bootstrap.html">Bootstrap</a></li>
+        <li>Foundation</li>
+        <li>Semantic UI</li>
+        <li>UI Kit</li>
+        <li>Materialize</li>
+        <li><a href="milligram.html">Milligram: speed & productivity</a></li>
+      </ul>
+
+      <h2>text fields</h2>
+      <form>
+        <input type="number" />
+        <!-- for capturing numeric value -->
+        <input type="date" />
+        <input type="password" />
+        <input type="email" readonly value="592361926@qq.com" />
+        <input type="email" disabled value="592361926@qq.com" />
+        <input type="email" placeholder="Email" />
+        <!-- disabled can;t be selected, readonly can be select -->
+        <textarea>Comment...</textarea>
+      </form>
+
+      <!-- data list: suggestion list -->
+      <h2>data lists</h2>
+      <p>user can still type in value</p>
+      <p>
+        data-value give option an unique identify whihc can be used by jac
+        script to get the data
+      </p>
+      <form>
+        <input type="text" list="countries" autocomplete="off" />
+        <datalist id="countries">
+          <option data-value="1">Australia</option>
+          <option>Canada</option>
+          <option>India</option>
+          <option>United States</option>
+        </datalist>
+      </form>
+
+      <!-- drop down list -->
+      <h2>drop down lists</h2>
+      <p>selected = default selection</p>
+      <p>multiple = select multiple option</p>
+      <form>
+        <select multiple>
+          <!-- <option value="">Select a Course...</option> -->
+          <option value="1" selected>HTML</option>
+          <option value="2">CSS</option>
+          <option value="3">JavaScript</option>
+        </select>
+      </form>
+
+      <form>
+        <select>
+          <optgroup label="Front-end Course">
+            <option value="1">HTML</option>
+            <option value="2">CSS</option>
+            <option value="3">JavaScript</option>
+          </optgroup>
+          <optgroup label="Back-end Course">
+            <option value="1">Node.JS</option>
+            <option value="2">ASP.NET</option>
+            <option value="3">Django</option>
+          </optgroup>
+        </select>
+      </form>
+
+      <!-- check box -->
+      <h2>check box</h2>
+      <p>
+        using milligram, it changes the checkbox to block element, we need to
+        change it back to inline block
+      </p>
+      <div>
+        <input type="checkbox" id="front-end" />
+        <label class="label-inline" for="front-end">Front-end</label>
+      </div>
+
+      <div>
+        <input type="checkbox" id="back-end" disabled />
+        <label class="label-inline" for="back-end">Back-end</label>
+      </div>
+
+      <!-- radio button -->
+      <h2>radio button</h2>
+      <form>
+        <div>
+          <input type="radio" name="membership" id="silver" checked />
+          <label for="sliver" class="label-inline">Sliver</label>
+        </div>
+        <div>
+          <input type="radio" name="membership" id="gold" />
+          <label for="gold" class="label-inline">Gold</label>
+        </div>
+      </form>
+
+      <!-- slider -->
+      <h2>slider</h2>
+      <input type="range" min="0" max="100" value="90">
+      <p>display value need to use JavaScript</p>
+
+      <!-- file inputs -->
+      <h2>file input</h2>
+      <input type="file" multiple>
+      <input type="file" accept=".jpg, .png">
+      <input type="file" accept="image/*"> <!-- all image -->
+
+      <!-- grouping related fields  -->
+      <p>using fieldset/section and legend/h2 are the same</p>
+      <fieldset>
+        <legend>Payment</legend>
+        <input type="text" >
+        <input type="text" >
+        <input type="text" >
+      </fieldset>
+      <section>
+        <h2>Payment</h2>
+        <input type="text" >
+        <input type="text" >
+        <input type="text" >
+      </section>
+
+      <!-- hidden field -->
+      <h2>hidden field</h2>
+      <p>hidden field is not visible to user but can be see in inspect</p>
+      <p>often used to store the id of the content being edited</p>
+      <input type="hidden" name="course-id" value="1234"> 
+
+      <!-- data validation -->
+      <h2>data validation</h2>
+      <p>hacker: use really long value input to try to break thing</p>
+      <p>more complex data validation use JavaScript</p>
+      <form>
+        <input type="text" required minlength="3" maxlength="10">
+        <button type="submit">Submit</button>
+        <input type="number" min="4" max="10">
+      </form>
+
+      <!-- submitting the form -->
+      <h2>submitting the form</h2>
+      <p>we can use input or button to create submit button</p>
+      <p>we can only use button to add icon</p>
+      <form>
+        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Email">
+        <input type="submit" placeholder="Submit">
+        <button type="submit">Submit</button>
+      </form>
+      <p>server side technologies </p>
+
+
+
+    </main>
+    <footer></footer>
+  </body>
+</html>
